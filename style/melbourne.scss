@@ -1,0 +1,372 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+header {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+
+    section.logo {
+        align-items: center;
+        flex: 3 1 500px;
+        display: flex;
+
+        img {
+            height: 4.5vw;
+            width: 4.5vw;
+            padding: 0.5rem;
+         }
+
+        h1 {
+            padding: 1.5rem 1rem;
+            font-size: 2rem;
+        }
+
+        
+    }
+
+    nav {
+        flex: 7 1 500px;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                list-style: none;
+                a {
+                    padding: 0.5rem;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.5rem;
+                    transition: all 0.2s ease;
+                    &:hover {
+                        color: wheat;
+                        border-bottom: 3px solid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+
+    img.greatOceanRoad {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: -10;
+        bottom: 0;
+        left: 0;
+    }
+
+    main{
+
+        section.bgImg {
+            min-height: 70vh;
+            background-image: url('../img/kangaroo.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: all 1s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            position: relative;
+            z-index: -1;
+    
+            div.filter {
+                background-color: rgba(0,0,0, 0.5);
+                width: 100%;
+                min-height: 70vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    
+            h3 {
+                text-align: center;
+                color: white;
+                font-size: 2.25rem;
+                z-index: 1;
+            }
+        }    
+    
+        section.fourCircle {
+            background-color: white;
+            padding: 2rem 1rem;
+            h3 {
+                text-align: center;
+                font-size: 2rem;
+            }
+    
+            div.circles {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+    
+                div.circle {
+                    padding: 1rem;
+                    flex: 0 1 250px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    img {
+                        width: 80%;
+                        border-radius: 50%;
+                        padding: 0.3rem;
+                        transition: 1s ease;
+                        &:hover {
+                            border: 1px solid #0e54cd;
+                            cursor: pointer;
+                            transform: scale(1.1);
+                        }
+                    }
+    
+                    p{
+                        text-align: center;
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+    
+        section.view {
+            min-height: 70vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            h3 {
+                font-size: 2.5rem;
+                color: white;
+            }
+        }
+
+        section.googleMap {
+            background-color: white;
+           
+            text-align: center;
+            padding: 2rem;
+
+            h3 {
+                font-size: 2.5rem;
+                padding: 0.25rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+               padding: 1rem;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.2);
+        
+        section.logo{
+            img {
+                height: 4vw;
+                width: 17vw;
+            }
+            
+            h3 {
+                font-size: 1rem;
+                text-align: center;
+                padding: 0.5rem;
+            }
+        }
+
+        section.social {
+            margin-top: 0.5rem;
+
+            a {
+                img{
+                    height: 2vw;
+                    width: 2vw;
+                    margin: 0rem 1rem;
+                }
+            }
+            
+        }
+    
+        
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+
+        section.logo {
+            flex-direction: column;
+
+                img {
+                    min-width: 20vw;
+                    min-height: 10vh;
+                    padding: 0rem;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                    padding: 0.2rem;
+                }
+            }
+
+        
+
+        nav {
+            ul {
+                flex-direction: column;
+                li {
+                    padding: 0.25rem;
+                    a {
+                        
+                        font-size: 1.25rem;
+                        &:hover {
+                            border-bottom: none;
+                        }
+                    }
+                        
+                }
+            }
+        } 
+
+        
+        
+     }
+
+     footer {
+        section.logo {
+
+            img {
+                min-width: 30vw;
+                min-height: 8vh;
+                margin-left: 1rem;
+            }            
+        }
+        section.social {
+            a {
+                img {
+                    min-width: 4vw;
+                    min-height: 4vw;
+                }
+            }
+        }
+     }
+} 
+
+main.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    div.container {
+        background:transparent;
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        position: relative;
+        width: 500px;
+        min-height: 550px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        
+        div h1 {
+            text-align: center;
+            color: white;
+            position: relative;
+            bottom: 45px;
+            font-size: 25px;
+        }
+
+        form.login {
+            width: 300px;
+            height: 200px;
+
+
+            i {
+                position: relative;
+                top: 40px;
+                left: 275px
+            }
+
+            input {
+                width: 100%;
+                height: 2.5rem;
+                border-radius: 40px;
+                border: 2px solid rgba(#ddb31d, 0.4);
+                margin: 0.5rem 0;
+                padding: 20px 45px 20px 20px;
+            }
+
+            
+            div.last {
+                display: flex;
+                justify-content: space-between;
+                p {
+                    margin: 0.7rem 0.5rem;
+                    font-size: 0.85rem;
+                    
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        
+
+                        &:hover {
+                            color: purple;
+                            text-decoration: underline;
+                        }
+                    }    
+                }   
+            }   
+               
+        
+        }
+
+    }
+
+    div.container form button {
+    background-color: #faff00;
+    background-image: linear-gradient(319deg, #faff00 0%, #ff1000 37%, #ff6a00 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    color: white;
+    width:100%;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 40px;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+    }
+}
+
